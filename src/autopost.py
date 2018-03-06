@@ -103,11 +103,11 @@ class Gumtree:
                 print("Can you complete the captcha for me?")
             time.sleep(1)
         print("Thanks!")
+        with open("cookies.json", "w") as file:
+            json.dump(self.driver.get_cookies(), file)
         return True
 
     def close(self):
-        with open("cookies.json", "w") as file:
-            json.dump(self.driver.get_cookies(), file)
         self.driver.close()
 
     def clean(self):
