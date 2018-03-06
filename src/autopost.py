@@ -102,6 +102,8 @@ class Gumtree:
             elif not i % 5:
                 print("Can you complete the captcha for me?")
             time.sleep(1)
+        else:
+            return False
         print("Thanks!")
         with open("cookies.json", "w") as file:
             json.dump(self.driver.get_cookies(), file)
