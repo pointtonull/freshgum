@@ -202,9 +202,9 @@ def main():
 
     gumtree.driver.close()
     time.sleep(1)
-    print("Closing all remaining instances")
-    call(["matar", "chrome"])
-    call(["matar", "chromium"])
+#    print("Closing all remaining instances")
+#    call(["killall", "-I", "chrome"])
+#    call(["killall", "-I", "chromium"])
 
 
 if __name__ == "__main__":
